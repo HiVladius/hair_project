@@ -1,13 +1,14 @@
+import { NavLink } from "react-router-dom";
 
-import { NavLink } from 'react-router-dom';
-import { Package, Users, Tags } from 'lucide-react';
+import { Scissors, Brush, SprayCan } from "lucide-react";
 
-const ClientNavigation = () => {
+export const CuponsNavigation = () => {
   const navItems = [
-    { path: 'products', icon: Package, label: 'Productos' },
-    { path: 'list', icon: Users, label: 'Clientes' },
-    { path: 'tags', icon: Tags, label: 'Etiquetas' },
+    { path: "list", icon: Scissors, label: "Cupones" },
+    { path: "tinte", icon: Brush, label: "Tinte" },
+    { path: "hairstyles", icon: SprayCan, label: "Peinado" },
   ];
+
 
   return (
     <nav className="w-64 bg-white rounded-lg shadow p-4">
@@ -18,7 +19,7 @@ const ClientNavigation = () => {
             to={item.path}
             className={({ isActive }) =>
               `flex items-center px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-colors ${
-                isActive ? 'bg-indigo-50 text-indigo-600' : ''
+                isActive ? "bg-indigo-50 text-indigo-600" : ""
               }`
             }
           >
@@ -30,5 +31,3 @@ const ClientNavigation = () => {
     </nav>
   );
 };
-
-export default ClientNavigation;
