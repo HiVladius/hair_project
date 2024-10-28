@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { NavLink } from 'react-router-dom';
 import { 
   Receipt, 
@@ -6,7 +6,7 @@ import {
   CreditCard, 
   Mail, 
   Scissors, 
-  FileTemplate, 
+  File, 
   Wallet, 
   Clock, 
   Calendar
@@ -19,7 +19,7 @@ const SettingsNavigation = () => {
     { path: 'register-payment', icon: CreditCard, label: 'Registrar pago' },
     { path: 'mail-server', icon: Mail, label: 'Servidor de correo' },
     { path: 'services', icon: Scissors, label: 'Servicios' },
-    { path: 'templates', icon: FileTemplate, label: 'Plantillas' },
+    { path: 'templates', icon: File, label: 'Plantillas' },
     { path: 'payment-gateway', icon: Wallet, label: 'Pasarela de pago' },
     { path: 'service-hours', icon: Clock, label: 'Horario de servicio' },
     { path: 'booking-portal', icon: Calendar, label: 'Portal de reservas' },
