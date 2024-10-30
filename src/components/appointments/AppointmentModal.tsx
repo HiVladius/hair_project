@@ -1,7 +1,7 @@
-import React, { useState, useCallback, useRef } from 'react';
-import { X } from 'lucide-react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import { format } from 'date-fns';
+import React, { useState, useCallback, useRef } from "react";
+import { X } from "lucide-react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { format } from "date-fns";
 // import { es } from 'date-fns/locale';
 
 interface AppointmentModalProps {
@@ -31,12 +31,13 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({
 }) => {
   const [formData, setFormData] = useState<AppointmentData>({
     date: selectedDate,
-    clientName: '',
-    phone: '',
-    email: '',
-    location: '',
+    clientName: "",
+    phone: "",
+    email: "",
+    location: "",
   });
-  const [coordinates, setCoordinates] = useState<google.maps.LatLngLiteral>(defaultCenter);
+  const [coordinates, setCoordinates] =
+    useState<google.maps.LatLngLiteral>(defaultCenter);
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const geocoder = useRef<google.maps.Geocoder>();
 
@@ -44,28 +45,31 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    if (name === 'location' && value) {
+    if (name === "location" && value) {
       geocodeAddress(value);
     }
   };
 
-  const geocodeAddress = useCallback((address: string) => {
-    if (!geocoder.current) {
-      geocoder.current = new google.maps.Geocoder();
-    }
-
-    geocoder.current.geocode({ address }, (results, status) => {
-      if (status === 'OK' && results?.[0]?.geometry?.location) {
-        const location = results[0].geometry.location;
-        const newCoordinates = {
-          lat: location.lat(),
-          lng: location.lng(),
-        };
-        setCoordinates(newCoordinates);
-        map?.panTo(newCoordinates);
+  const geocodeAddress = useCallback(
+    (address: string) => {
+      if (!geocoder.current) {
+        geocoder.current = new google.maps.Geocoder();
       }
-    });
-  }, [map]);
+
+      geocoder.current.geocode({ address }, (results, status) => {
+        if (status === "OK" && results?.[0]?.geometry?.location) {
+          const location = results[0].geometry.location;
+          const newCoordinates = {
+            lat: location.lat(),
+            lng: location.lng(),
+          };
+          setCoordinates(newCoordinates);
+          map?.panTo(newCoordinates);
+        }
+      });
+    },
+    [map]
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,10 +102,12 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({
                 type="datetime-local"
                 name="date"
                 value={format(formData.date, "yyyy-MM-dd'T'HH:mm")}
-                onChange={(e) => setFormData(prev => ({
-                  ...prev,
-                  date: new Date(e.target.value)
-                }))}
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    date: new Date(e.target.value),
+                  }))
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />

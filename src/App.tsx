@@ -6,7 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Appointments from "./pages/Appointments";
 import Clients from "./pages/Clients";
 import Finance from "./pages/Finance";
-import Inventory from './pages/Inventory';
+import Inventory from "./pages/Inventory";
 import Settings from "./pages/Settings";
 import Business from "./pages/Business";
 import Coupons from "./pages/Coupons";
@@ -76,6 +76,12 @@ import ClientTags from "./pages/clients/ClientTags";
 import TypeCupons from "./pages/cupons/TypeCupons";
 import Tinte from "./pages/cupons/Tinte";
 import HairStyles from "./pages/cupons/HairStyles";
+
+// Affiliate subroutes
+import AffiliateList from "./pages/affiliates/AffiliatesList";
+import AffiliateRegister from "./pages/affiliates/AffiliatesRegister";
+import AffiliateUnregister from "./pages/affiliates/AffiliatesUnregister";
+
 
 function App() {
   return (
@@ -170,7 +176,14 @@ function App() {
             <Route path="tinte" element={<Tinte />} />
             <Route path="hairstyles" element={<HairStyles />} />
           </Route>
-          <Route path="affiliate" element={<Affiliate />} />
+
+          {/* // Affiliate */}
+          <Route path="affiliate" element={<Affiliate />}>
+            <Route index element={<Navigate to="list" replace />} />
+            <Route path="list" element={<AffiliateList />} />
+            <Route path="register" element={<AffiliateRegister />} />
+            <Route path="unregister" element={<AffiliateUnregister />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
