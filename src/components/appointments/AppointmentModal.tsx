@@ -20,7 +20,7 @@ interface AppointmentData {
   coordinates?: google.maps.LatLngLiteral;
 }
 
-const GOOGLE_MAPS_API_KEY = import.meta.env.GOOGLE_MAPS_API_KEY /*"AIzaSyDNTNVk8vR0dPku0I9ZVUJjzb2j2i0oOLY";*/
+const GOOGLE_MAPS_API_KEY = import.meta.env.GOOGLE_MAPS_API_KEY 
 const defaultCenter = { lat: 19.4326, lng: -99.1332 }; // Mexico City
 
 const AppointmentModal: React.FC<AppointmentModalProps> = ({
