@@ -14,10 +14,10 @@ const AppointmentNavigation = () => {
   const navItems = [
     { path: 'list', icon: Calendar, label: 'Citas' },
     { path: 'calendar', icon: CalendarDays, label: 'Calendario' },
-    { path: 'daily', icon: CalendarClock, label: 'Vista diaria' },
+    // { path: 'daily', icon: CalendarClock, label: 'Vista diaria' },
     { path: 'open-shift', icon: DoorOpen, label: 'Abrir turno' },
-    { path: 'cash-closing', icon: Receipt, label: 'Corte de caja' },
-    { path: 'close-shift', icon: DoorClosed, label: 'Cerrar caja' },
+    // { path: 'cash-closing', icon: Receipt, label: 'Corte de caja' },
+    // { path: 'close-shift', icon: DoorClosed, label: 'Cerrar caja' },
     { path: 'client-portal', icon: Users, label: 'Portal del cliente' },
   ];
 

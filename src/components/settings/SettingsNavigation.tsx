@@ -15,14 +15,14 @@ import {
 const SettingsNavigation = () => {
   const navItems = [
     { path: 'billing', icon: Receipt, label: 'Facturación' },
-    { path: 'electronic-invoice', icon: FileText, label: 'Factura electrónica' },
-    { path: 'register-payment', icon: CreditCard, label: 'Registrar pago' },
-    { path: 'mail-server', icon: Mail, label: 'Servidor de correo' },
+    // { path: 'electronic-invoice', icon: FileText, label: 'Factura electrónica' },
+    // { path: 'register-payment', icon: CreditCard, label: 'Registrar pago' },
+    // { path: 'mail-server', icon: Mail, label: 'Servidor de correo' },
     { path: 'services', icon: Scissors, label: 'Servicios' },
-    { path: 'templates', icon: File, label: 'Plantillas' },
-    { path: 'payment-gateway', icon: Wallet, label: 'Pasarela de pago' },
-    { path: 'service-hours', icon: Clock, label: 'Horario de servicio' },
-    { path: 'booking-portal', icon: Calendar, label: 'Portal de reservas' },
+    // { path: 'templates', icon: File, label: 'Plantillas' },
+    // { path: 'payment-gateway', icon: Wallet, label: 'Pasarela de pago' },
+    // { path: 'service-hours', icon: Clock, label: 'Horario de servicio' },
+    // { path: 'booking-portal', icon: Calendar, label: 'Portal de reservas' },
   ];
 
   return (

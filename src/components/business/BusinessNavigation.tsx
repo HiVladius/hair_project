@@ -14,11 +14,11 @@ const BusinessNavigation = () => {
   const navItems = [
     { path: 'company', icon: Building2, label: 'Mi empresa' },
     { path: 'invoices', icon: Receipt, label: 'Mis facturas' },
-    { path: 'licenses', icon: Key, label: 'Licencias' },
-    { path: 'manual', icon: BookOpen, label: 'Manual de sistema' },
-    { path: 'tickets', icon: TicketCheck, label: 'Tickets' },
-    { path: 'staff', icon: Users, label: 'Staff' },
-    { path: 'wiki', icon: BookText, label: 'Wiki' },
+    // { path: 'licenses', icon: Key, label: 'Licencias' },
+    // { path: 'manual', icon: BookOpen, label: 'Manual de sistema' },
+    // { path: 'tickets', icon: TicketCheck, label: 'Tickets' },
+    // { path: 'staff', icon: Users, label: 'Staff' },
+    // { path: 'wiki', icon: BookText, label: 'Wiki' },
   ];
 
   return (

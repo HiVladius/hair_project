@@ -17,12 +17,12 @@ const Layout = () => {
     { path: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
     { path: '/appointments', icon: Calendar, label: 'Citas' },
     { path: '/clients', icon: Users, label: 'Clientes' },
-    { path: '/finance', icon: PiggyBank, label: 'Finanzas' },
-    { path: '/inventory', icon: Package, label: 'Almacén' },
+    // { path: '/finance', icon: PiggyBank, label: 'Finanzas' },
+    // { path: '/inventory', icon: Package, label: 'Almacén' },
     { path: '/settings', icon: Settings, label: 'Ajustes' },
     { path: '/business', icon: Building2, label: 'Empresa' },
     { path: '/coupons', icon: Ticket, label: 'Cupones' },
-    { path: '/affiliate', icon: Users2, label: 'Afiliado' },
+    { path: '/affiliate', icon: Users2, label: 'Empleados' },
   ];
 
   return (

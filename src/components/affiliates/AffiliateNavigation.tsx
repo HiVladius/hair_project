@@ -4,7 +4,7 @@ import { Users, UserPlus, UserMinus } from 'lucide-react';
 
 const AffiliateNavigation = () => {
   const navItems = [
-    { path: 'list', icon: Users, label: 'Afiliados' },
+    { path: 'list', icon: Users, label: 'Empleados' },
     { path: 'register', icon: UserPlus, label: 'Altas' },
     { path: 'unregister', icon: UserMinus, label: 'Bajas' },
   ];
